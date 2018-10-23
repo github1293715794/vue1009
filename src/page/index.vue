@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<Header></Header>
+		<img src="static/image/vue.png" style="width:30px;" alt="">
 		<div>
 			<ul>
 				<li v-for="item in list" :key="item.login">

@@ -1,0 +1,30 @@
+$index-color: red;
+.index-color {
+  color: $index-color;
+}
+// 选择器嵌套
+p {
+  a {
+    color: red;
+    .include & {
+      color: green;
+    }
+  }
+}
+// 属性嵌套(有相同的属性前缀)
+.box {
+  font: {
+    size: 12px;
+    weight: bold;
+  }
+}
+// 继承
+.btn {
+  border: 1px solid red;
+  padding: 6px 10px;
+}
+.btn-primary {
+  background-color: rgb(17, 129, 204);
+  color: #fff;
+  @extend .btn;
+}

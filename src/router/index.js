@@ -4,6 +4,7 @@ import Index from '@/page/index'
 import Content from '@/page/content'
 
 Vue.use(VueRouter)
+
 export default new VueRouter({
 	routes:[
     {

@@ -1,4 +1,5 @@
 $index-color: red;
+$border:2;
 .index-color {
   color: $index-color;
 }
@@ -27,4 +28,8 @@ p {
   background-color: rgb(17, 129, 204);
   color: #fff;
   @extend .btn;
+}
+
+div.border {
+  border:#{$border}px solid red;
 }

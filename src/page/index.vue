@@ -18,6 +18,8 @@
 			<!-- 属性嵌套，有相同的属性前缀 -->
 			<div class="box">字体属性有相同前缀的font</div>
 			<input class="btn-primary" type="button" value="继承，.btn-primary 中引用 .btn ">
+			<!-- $border 数值使用 -->
+			<div class="border">$border</div>
 		</div>
 		<!-- <div>
 			<ul>

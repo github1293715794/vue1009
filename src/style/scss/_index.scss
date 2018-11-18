@@ -1,8 +1,12 @@
 $index-color: red;
-$border:2;
+// $index-color:'red';
 .index-color {
   color: $index-color;
 }
+// .index-color {
+//   color: #{$index-color};
+// }
+$border:2;
 // 选择器嵌套
 p {
   a {

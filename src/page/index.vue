@@ -21,14 +21,14 @@
 			<!-- $border 数值使用 -->
 			<div class="border">$border</div>
 		</div>
-		<!-- <div>
+		<div>
 			<ul>
 				<li v-for="item in list" :key="item.login">
 					<span>{{item.id}}</span>
 					<router-link :to="'/content/'+item.login">{{item.login}}</router-link>
 				</li>
 			</ul>
-		</div> -->
+		</div>
 		<Footer></Footer>
 	</div>
 </template>
@@ -37,6 +37,7 @@
 	// 项目的列表页面
 	import Header from '../components/header.vue'
 	import Footer from '../components/footer.vue'
+	// import axiosUrl from '../api'  局部引入可以直接使用 axiosUrl.users，放到全局中见main.js中
 	export default {
 		components: {Header,Footer},
 		data(){
@@ -45,11 +46,11 @@
 			}
 		},
 		created(){
-			// this.getData();
+			this.getData();
 		},
 		methods:{
 			getData(){
-				this.$http.get('https://api.github.com/users').then(resp => {
+				this.$http.get(this.axiosUrl.users).then(resp => {
 					this.list = resp.data;
 					console.log(resp);
 				}).catch(err => {

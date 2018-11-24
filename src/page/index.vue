@@ -12,26 +12,6 @@
 					<a href="#">.include类下的p标签中的a标签</a>
 				</p>
 			</div>
-			<div class="include">
-				<p>
-					<a href="#">.include类下的p标签中的a标签</a>
-				</p>
-			</div>
-			<div class="include">
-				<p>
-					<a href="#">.include类下的p标签中的a标签</a>
-				</p>
-			</div>
-			<div class="include">
-				<p>
-					<a href="#">.include类下的p标签中的a标签</a>
-				</p>
-			</div>
-			<div class="include">
-				<p>
-					<a href="#">.include类下的p标签中的a标签</a>
-				</p>
-			</div>
 			<p>
 				<a href="#">p标签中的a标签，不包含在.include类中</a>
 			</p>

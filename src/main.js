@@ -17,4 +17,9 @@ new Vue({
   el: '#app',
   router,
   render:h=>h(App)
-}).$mount('#app')
+}).$mount('#app')// 手动挂载
+/* 
+  render: function (createElement) {
+    return createElement(App);
+  } 
+*/

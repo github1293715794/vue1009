@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header :toSonTitle="title"></Header>
+		<Header :toSonTitle="title" v-on:to-father="getSonParam"></Header>
 		<img src="static/image/vue.png" style="width:30px;" alt="">
 		<div>
 			<h3>关于scss的应用</h3>
@@ -20,6 +20,7 @@
 			<input class="btn-primary" type="button" value="继承，.btn-primary 中引用 .btn ">
 			<!-- $border 数值使用 -->
 			<div class="border">$border</div>
+			<div>接收子组件传过来的数据name：{{name}}</div>
 		</div>
 		<div>
 			<ul>
@@ -43,7 +44,8 @@
 		data(){
 			return {
 				list:[],
-				title:"列表页"
+				title:"列表页",
+				name:""
 			}
 		},
 		created(){
@@ -57,6 +59,10 @@
 				}).catch(err => {
 					console.log(err);
 				})
+			},
+			getSonParam(name){
+				this.name = name;
+				alert(this.name)
 			}
 		}
 	}

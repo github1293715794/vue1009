@@ -33,7 +33,7 @@ p {
   color: #fff;
   @extend .btn;
 }
-
+// 计算
 div.border {
   border-left:#{$border+20}px solid gray;// #{$border*5}
 }

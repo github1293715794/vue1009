@@ -21,6 +21,7 @@
 			<!-- $border 数值使用 -->
 			<div class="border">$border</div>
 			<div>接收子组件传过来的数据name：{{name}}</div>
+			
 		</div>
 		<div>
 			<ul>
@@ -45,7 +46,7 @@
 			return {
 				list:[],
 				title:"列表页",
-				name:""
+				name:"",
 			}
 		},
 		created(){
@@ -61,8 +62,9 @@
 				})
 			},
 			getSonParam(name){
+				// 接收从子组件传递数据的方法
 				this.name = name;
-				alert(this.name)
+				alert(this.name);
 			}
 		}
 	}

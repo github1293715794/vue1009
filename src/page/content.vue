@@ -16,7 +16,7 @@
 		data(){
 			return {
 				loginName:this.$route.params.id,
-				contentObj:{}
+				contentObj:{},
 			}
 		},
 		created (){

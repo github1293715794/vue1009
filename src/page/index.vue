@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header></Header>
+		<Header :toSonTitle="title"></Header>
 		<img src="static/image/vue.png" style="width:30px;" alt="">
 		<div>
 			<h3>关于scss的应用</h3>
@@ -43,6 +43,7 @@
 		data(){
 			return {
 				list:[],
+				title:"列表页"
 			}
 		},
 		created(){

@@ -35,5 +35,5 @@ p {
 }
 
 div.border {
-  border:#{$border+20}px solid red;// #{$border*5}
+  border-left:#{$border+20}px solid gray;// #{$border*5}
 }

@@ -3,6 +3,7 @@
     <h3>vue header - {{toSonTitle}}</h3>
     <input type="button" value="向父组件传递值" @click="toFatherParam">
     <button @click="toFooterParam">非父子组件的传参,向footer页面传值</button>
+    <div>状态管理下的count：{{count}}</div>
   </header>
 </template>
 
@@ -12,6 +13,11 @@
       return {
         name:"我是子组件传过来的",
 				contentNum:"非父子传参"
+      }
+    },
+    computed: {
+      count () {
+        return this.$store.state.count;
       }
     },
     props:["toSonTitle"],

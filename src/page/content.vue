@@ -13,18 +13,18 @@
 <script>
 	// 项目的内容页面
 	export default {
-		data(){
+		data () {
 			return {
-				loginName:this.$route.params.id,
-				contentObj:{},
+				loginName: this.$route.params.id,
+				contentObj: {},
 			}
 		},
-		created (){
+		created () {
 			this.getData();
 		},
-		methods:{
-			getData(){
-				this.$http.get('https://api.github.com/users/'+this.loginName).then(resp => {
+		methods: {
+			getData () {
+				this.$http.get('https://api.github.com/users/' + this.loginName).then(resp => {
 					this.contentObj = resp.data;
 				}).catch(err => {
 					console.log(err);

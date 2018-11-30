@@ -9,10 +9,10 @@
 
 <script>
   export default {
-    data(){
+    data () {
       return {
-        name:"我是子组件传过来的",
-				contentNum:"非父子传参"
+        name: "我是子组件传过来的",
+				contentNum: "非父子传参"
       }
     },
     computed: {
@@ -20,14 +20,14 @@
         return this.$store.state.count;
       }
     },
-    props:["toSonTitle"],
-    methods:{
-      toFatherParam(){
+    props: ["toSonTitle"],
+    methods: {
+      toFatherParam () {
         // 向父组件传递数据的方法
-        this.$emit("to-father",this.name);
+        this.$emit("to-father", this.name);
       },
-			toFooterParam(){
-				this.bus.$emit("to-footer",this.contentNum);
+			toFooterParam () {
+				this.bus.$emit("to-footer", this.contentNum);
 			}
     }
   }

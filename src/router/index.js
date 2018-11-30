@@ -1,21 +1,21 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Index from '@/page/index'
-import Content from '@/page/content'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Index from '@/page/index';
+import Content from '@/page/content';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export default new VueRouter({
-	routes:[
+	routes: [
     {
-      path:'/',
+      path: '/',
       component: Index
     },
     {
-      path:'/content/:id',
+      path: '/content/:id',
       component: Content
     }
   ],
-	linkActiveClass:"active"
-})
+	linkActiveClass: "active"
+});
  

@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    data(){
+    data () {
       return {
         num:"",
       }
@@ -22,8 +22,8 @@
     created () {
       console.log(this.$store.state.count);
     },
-    mounted(){
-      this.bus.$on("to-footer",num => {
+    mounted () {
+      this.bus.$on("to-footer", num => {
         this.num = num;
       })
     },
@@ -34,7 +34,7 @@
       decrement () {
         this.$store.commit('decrement');
       }
-    },
+    }
   }
 </script>
 

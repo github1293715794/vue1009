@@ -9,29 +9,29 @@
 
 <script>
   export default {
-    data () {
+    data(){
       return {
         num:"",
       }
     },
     computed: {
-      count () {
+      count(){
         return this.$store.state.count;
       }
     },
-    created () {
+    created(){
       console.log(this.$store.state.count);
     },
-    mounted () {
+    mounted(){
       this.bus.$on("to-footer", num => {
         this.num = num;
       })
     },
     methods: {
-      increment () {
+      increment(){
         this.$store.commit('increment');
       },
-      decrement () {
+      decrement(){
         this.$store.commit('decrement');
       }
     }

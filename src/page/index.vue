@@ -42,18 +42,18 @@
 	// import axiosUrl from '../api'  局部引入可以直接使用 axiosUrl.users，放到全局中见main.js中
 	export default {
 		components: {Header,Footer},
-		data () {
+		data(){
 			return {
 				list: [],
 				title: "列表页",
 				name: "",
 			}
 		},
-		created () {
+		created(){
 			this.getData();
 		},
 		methods: {
-			getData () {
+			getData(){
 				this.$http.get(this.axiosUrl.users).then(resp => {
 					this.list = resp.data;
 					console.log(resp);

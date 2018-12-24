@@ -9,24 +9,24 @@
 
 <script>
   export default {
-    data () {
+    data(){
       return {
         name: "我是子组件传过来的",
 				contentNum: "非父子传参"
       }
     },
     computed: {
-      count () {
+      count(){
         return this.$store.state.count;
       }
     },
     props: ["toSonTitle"],
     methods: {
-      toFatherParam () {
+      toFatherParam(){
         // 向父组件传递数据的方法
         this.$emit("to-father", this.name);
       },
-			toFooterParam () {
+			toFooterParam(){
 				this.bus.$emit("to-footer", this.contentNum);
 			}
     }

@@ -14,6 +14,7 @@ npm install --save node-sass
 npm install --save vue-router	路由
 npm install --save axios			接口请求工具
 npm install --save vuex				状态管理工具
+npm install --save vue-infinite-loading   上拉加载、下拉刷新插件
 
 #运行项目
 打包		npm run build

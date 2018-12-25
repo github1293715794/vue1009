@@ -39,6 +39,7 @@
 	// 项目的列表页面
 	import Header from '../components/header.vue';
 	import Footer from '../components/footer.vue';
+
 	// import axiosUrl from '../api'  局部引入可以直接使用 axiosUrl.users，放到全局中见main.js中
 	export default {
 		components: {Header,Footer},
@@ -61,11 +62,11 @@
 					console.log(err);
 				})
 			},
-			getSonParam (name) {
+			getSonParam(name){
 				// 接收从子组件传递数据的方法
 				this.name = name;
 				alert(this.name);
-			}
+			},
 		}
 	}
 </script>

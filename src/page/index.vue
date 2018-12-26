@@ -53,6 +53,12 @@
 		created(){
 			this.getData();
 		},
+		filters: {
+			addZero(id){
+				id = id < 10 ? ("0"+id) : id;
+				return id;
+			}
+		},
 		methods: {
 			getData(){
 				this.$http.get(this.axiosUrl.users).then(resp => {

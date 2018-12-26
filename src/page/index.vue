@@ -26,7 +26,7 @@
 		<div>
 			<ul>
 				<li v-for="item in list" :key="item.login">
-					<span>{{item.id}}</span>
+					<span>{{item.id | addZero}}</span>
 					<router-link :to="'/content/'+item.login">{{item.login}}</router-link>
 				</li>
 			</ul>

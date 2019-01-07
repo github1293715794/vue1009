@@ -21,7 +21,13 @@
 			<!-- $border 数值使用 -->
 			<div class="border">$border</div>
 			<div>接收子组件传过来的数据name：{{name}}</div>
-			
+			<!-- 点击获取红色颜色的水果 -->
+			<div>点击红色颜色的水果有提示：</div>
+			<div>
+				<input type="button" value="apple" @click="getRedFruit">
+				<input type="button" value="strawberry" @click="getRedFruit">
+				<input type="button" value="banana" @click="getRedFruit">
+			</div>
 		</div>
 		<div>
 			<ul>
@@ -73,6 +79,16 @@
 				this.name = name;
 				alert(this.name);
 			},
+			// 简写js方法
+			// 多重判断时使用Array.includes
+			getRedFruit(e){
+				const redFruit = ["apple", "strawberry"];
+				if(redFruit.includes(e.target.value)){
+					alert("red");
+				}else{
+					alert("not red")
+				}
+			}
 		}
 	}
 </script>

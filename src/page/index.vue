@@ -88,7 +88,8 @@
 				}else{
 					alert("not red")
 				}
-			}
+			},
+			// 去重方法
 		}
 	}
 </script>

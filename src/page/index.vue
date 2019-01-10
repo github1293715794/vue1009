@@ -107,6 +107,24 @@
 		}
 		return ary;
 	}
+	// 原型
+	var ary = [1,3,3,2,3,2,3,2,32,3,23,23,2,3];
+	Array.prototype.myUnique = function(){
+		var obj = {};
+		for(var i = 0; i < this.length; i++){
+			var cur = this[i];
+			if(typeof obj[cur] !== 'undefined'){
+				this[i] = this[this.length - 1];
+				this.length--;
+				i--;
+				continue;
+			}
+			obj[cur] = cur;
+		}
+		obj = null;
+		return this;
+	}
+	ary.myUnique();
 </script>
 
 <style lang="scss">

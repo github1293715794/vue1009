@@ -92,6 +92,21 @@
 			// 去重方法
 		}
 	}
+	var unique = function(){
+		var ary = [1,3,3,2,3,2,3,2,32,3,23,23,2,3];
+		var obj = {};
+		for(var i = 0; i < ary.length; i++){
+			var cur = ary[i];
+			if(typeof obj[cur] !== 'undefined'){
+				ary[i] = ary[ary.length - 1];
+				ary.length--;
+				i--;
+				continue;
+			}
+			obj[cur] = cur;
+		}
+		return ary;
+	}
 </script>
 
 <style lang="scss">

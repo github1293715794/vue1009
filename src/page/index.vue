@@ -128,6 +128,18 @@
 		return a - b;
 	});
 	// async await用法
+	let timer = async function(){
+		return new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve("2000");
+			},2000)
+		})
+	}
+	timer().then(result => {
+		console.log(result);
+	}).catch(err => {
+		console.log(err);
+	})
 </script>
 
 <style lang="scss">

@@ -127,6 +127,7 @@
 	ary.myUnique().sort(function(a, b){
 		return a - b;
 	});
+	// async await用法
 </script>
 
 <style lang="scss">

@@ -140,6 +140,21 @@
 	}).catch(err => {
 		console.log(err);
 	})
+
+	{
+		async function timer(){
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					resolve("2000");
+				},2000)
+			})
+		}
+		(async function(){
+			console.log("123");
+			await timer();
+			console.log("456")
+		})()
+	}
 </script>
 
 <style lang="scss">

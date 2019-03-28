@@ -18,7 +18,7 @@ Vue.prototype.bus = new Vue();// 事件总线  全局使用 this.bus.***
 import store from './store';// 引入store  store中已经引入了vuex
 
 Vue.config.productionTip = false;
-
+// 使用命令行提交代码
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
